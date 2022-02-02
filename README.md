@@ -27,6 +27,11 @@ This is a simple set of vue-components for documenting and visualizing the UI-ki
     </MyUi>
   </div>
 </template>
+
+<script>
+import { MyUi, MyUiCategory, MyUiComponent } from 'my-ui-set';
+// ...
+</script>
 ```
 
 ## Components and props

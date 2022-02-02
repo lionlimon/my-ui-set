@@ -3,6 +3,8 @@
 
   &__list {
     list-style-type: none;
+    margin: 0;
+    padding: 0;
   }
 
   &__item {
@@ -26,6 +28,10 @@
 
     &--active {
       border-color: 4px solid var(--main-color);
+    }
+
+    &:focus-visible {
+      outline-color: var(--main-color);
     }
   }
 }

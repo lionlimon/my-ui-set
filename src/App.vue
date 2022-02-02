@@ -33,13 +33,21 @@
 				<MyUiComponent>
 					<MyButton></MyButton>
 				</MyUiComponent>
+				<MyUiComponent>
+					<MyButton></MyButton>
+				</MyUiComponent>
 			</MyUiCategory>
 		</MyUi>
   </div>
 </template>
 
 <script>
-
+/**
+ * TODO: Не показывать кастомные теги самого пакета
+ * TODO: Не показывать вкладку с кастомными свойствами, если их нет
+ * TODO: Дать выбор положения кнопки открытия попапа с UI китом
+ * TODO: Редактор не видит компоненты пакета
+ */
 import MyUi from "./components/MyUi/MyUi";
 import MyUiCategory from "./components/MyUi/MyUiCategory/MyUiCategory";
 import MyUiComponent from "./components/MyUi/MyUiComponent/MyUiComponent";
