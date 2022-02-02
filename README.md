@@ -38,5 +38,5 @@ By default, shows all custom css properties .
 ### MyUiCategory
 **name** - name of category
 
-### MyUiCategory
+### MyUiComponent
 **name** - name of component. By default, shows the component's vue tag 
