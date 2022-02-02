@@ -74,7 +74,9 @@ export default {
 			if (!nodes) return;
 
 			nodes.forEach((item) => {
-				if (item.componentOptions?.tag !== 'MyUiCategory' && item.componentOptions?.tag !== 'my-ui-category')
+        if (!item.componentOptions?.tag) return;
+
+				if (item.componentOptions.tag !== 'MyUiCategory' && item.componentOptions.tag !== 'my-ui-category')
 					throw new Error(
 						'The interior of the slot must be an MyUiCategory component'
 					);
