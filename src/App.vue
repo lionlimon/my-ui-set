@@ -47,6 +47,8 @@
  * TODO: Не показывать вкладку с кастомными свойствами, если их нет
  * TODO: Дать выбор положения кнопки открытия попапа с UI китом
  * TODO: Редактор не видит компоненты пакета
+ * TODO: Сделать пропрос css значений для сочетания с приложением
+ * TODO: Много дубликатов кастомных свойств
  */
 import MyUi from "./components/MyUi/MyUi";
 import MyUiCategory from "./components/MyUi/MyUiCategory/MyUiCategory";
