@@ -1,6 +1,6 @@
 <template>
   <button
-    :class="{ 'my-ui__toggle--active': isActive }"
+    :class="[positionClass, { 'my-ui__toggle--active': isActive }]"
     class="my-ui__toggle"
     @click="$emit('on-toggle')"
   >
@@ -8,8 +8,7 @@
   </button>
 </template>
 
-<script lang="ts">
-
+<script>
 export default {
 	name: 'MyUiButton',
 
@@ -17,13 +16,24 @@ export default {
 		isActive: {
 			type: Boolean,
 			default: false,
-		}
+		},
+
+    position: {
+      type: String
+    }
 	},
 
 	computed: {
 		toggleButtonSymbol() {
 			return this.isActive ? '⇥' : '⇤';
-		}
+		},
+
+    positionClass() {
+      return `my-ui__toggle--${this.position}`;
+    }
 	}
 }
 </script>
+
+<style scoped lang="scss" src="./MyUiButton.scss"></style>
+

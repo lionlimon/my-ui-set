@@ -2,7 +2,7 @@
   <div id="app">
 		<!-- this need currentCategory prop -->
 		<!-- eslint-disable-next-line vue/no-unused-vars -->
-		<MyUi custom-css-properties-container=".my-ui" #default="{ currentCategory }">
+		<MyUi button-position="right-bottom" custom-css-properties-container=".my-ui" #default="{ currentCategory }">
 			<MyUiCategory name="Buttons">
 				<MyUiComponent>
 					<MyButton text="Button"></MyButton>
@@ -37,15 +37,12 @@
 					<MyButton></MyButton>
 				</MyUiComponent>
 			</MyUiCategory>
-
 		</MyUi>
   </div>
 </template>
 
 <script>
 /**
- * TODO: Не показывать кастомные теги самого пакета
- * TODO: Не показывать вкладку с кастомными свойствами, если их нет
  * TODO: Дать выбор положения кнопки открытия попапа с UI китом
  * TODO: Редактор не видит компоненты пакета
  * TODO: Сделать проброс css значений для сочетания с приложением

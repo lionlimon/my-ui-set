@@ -13,7 +13,7 @@
       />
 
       <div class="my-ui__category-detail">
-				<my-ui-category v-if="customProperties" name="CSS properties">
+				<my-ui-category v-if="customProperties.length" name="CSS properties">
 					<MyUiProperty v-for="[prop, value] in customProperties" :prop="prop" :value="value" :key="prop" />
 				</my-ui-category>
         <!-- only for my-ui-category components -->
@@ -21,7 +21,7 @@
       </div>
     </div>
 
-    <MyUiButton :is-active="isOpen" @on-toggle="isOpen = !isOpen" />
+    <MyUiButton :position="buttonPosition" :is-active="isOpen" @on-toggle="isOpen = !isOpen" />
   </div>
 </template>
 
@@ -55,13 +55,21 @@ export default {
 		customCssPropertiesContainer: {
 			type: String,
 			default: null
-		}
+		},
+
+    /**
+     * 'right-top' | 'right-bottom' | 'left-top' | 'left-bottom'
+     */
+    buttonPosition: {
+      type: String,
+      default: 'right-top'
+    }
 	},
 
 	methods: {
 		/* Iterates scoped slot components & and makes a list of them **/
 		setSidebarItems() {
-			if (this.customProperties) {
+			if (this.customProperties?.length) {
 				this.sidebarItems.push('CSS properties');
 			}
 
@@ -90,7 +98,6 @@ export default {
 			this.currentCategory = name;
 		}
 	},
-
 }
 </script>
 

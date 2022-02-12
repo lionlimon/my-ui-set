@@ -6,20 +6,6 @@
   bottom: 0;
 }
 
-@mixin flex-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-@mixin clear-button {
-  border: none;
-  background-color: transparent;
-}
-
-/* Reset Styles */
-
-
 /****************/
 
 .my-ui {
@@ -63,33 +49,6 @@
 
     &--visible {
       transform: translateX(0);
-    }
-  }
-
-  &__toggle {
-    @include clear-button;
-
-    z-index: 1;
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 40px;
-    height: 40px;
-
-    cursor: pointer;
-
-    font-weight: bold;
-    font-size: 18px;
-    color: var(--main-bg-color);
-    background-color: var(--main-color);
-    box-shadow: var(--box-shadow);
-
-    opacity: 0.5;
-
-    @include flex-center;
-
-    &:hover {
-      opacity: 1;
     }
   }
 

@@ -13,6 +13,7 @@ const isSameDomain = (styleSheet) => {
 
 const isStyleRule = (rule) => rule.type === 1;
 
+const isNotLocalProperties = (rule) => !rule?.selectorText.includes('my-ui');
 /**
  * @param {string} propertiesContainer
  * @return {array}
@@ -24,6 +25,7 @@ export function getCustomCssProperties(propertiesContainer = null) {
 			finalArr.concat(
 				[...sheet.cssRules]
 					.filter(isStyleRule)
+					.filter(isNotLocalProperties)
 					.filter(!propertiesContainer ? () => true : ((rule) => {
 						return rule?.selectorText.includes(propertiesContainer)
 					}))

@@ -1,0 +1,56 @@
+
+.my-ui__toggle {
+  border: none;
+  background-color: transparent;
+
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+
+  cursor: pointer;
+
+  font-weight: bold;
+  font-size: 18px;
+  color: var(--main-bg-color);
+  background-color: var(--main-color);
+  box-shadow: var(--box-shadow);
+
+  opacity: 0.5;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    opacity: 1;
+  }
+
+
+  &--right-bottom,
+  &--left-bottom,
+  &--left-top {
+    top: auto;
+    bottom: auto;
+    left: auto;
+    right: auto;
+  }
+
+  &--right-bottom {
+    bottom: 0;
+    right: 0;
+  }
+
+  &--left-bottom {
+    left: 0;
+    bottom: 0;
+  }
+
+  &--left-top {
+    left: 0;
+    top: 0;
+  }
+
+}

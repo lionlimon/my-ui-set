@@ -40,6 +40,8 @@ import { MyUi, MyUiCategory, MyUiComponent } from 'my-ui-set';
 **custom-css-properties-container** - container selector from which css properties will be taken.
 By default, shows all custom css properties .
 
+**button-position** ('left-top' | 'right-top' | 'right-bottom' | 'left-bottom') - position of toggle button 
+
 ### MyUiCategory
 **name** - name of category
 
